@@ -37,9 +37,43 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
+//YOUR JAVASCRIPT GOES HERE- to define variables and functions
+	var fp_count = 0; //a variable that counts answers correlating to food poisoning
+	var sb_count = 0; //a variable that counts answers correlating to stomach bug
 
-	//YOUR JAVASCRIPT GOES HERE
+	function fpAdd(){
+		fp_count = fp_count + 1; 
+		alert(fp_count);
 
+	}
+		//function that calculates the number of answers correlating to food poisoning
+
+	function sbAdd(){
+		sb_count =- sb_count + 1;
+
+	}
+		//function that calculates the number of answers correlating to stomach bug
+
+	function resultsPercent ()
+	{
+		var fpPercent = (fp_count/4)*100; //variable to calculate the food poisoning percentage
+		var sbPercent = (sb_count/4)*100; //varibale to calculate the stomach bug percentage
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is Food Poisoning =" + fpPercent + "%" + "<br> Probability it is a Stomach Bug =" + sbPercent + "%";
+		//makes the results posted on the results page
+
+	}
+		//function to calculate and output the probability that symptons are of food poisoning or a stomach bug
+
+
+	// The following code lets you know when the file was last modified.
+	// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
+       var docMod = document.lastModified;
+       alert("This file last modified  " + docMod);
+       console.log("This file last modified  " + docMod);
+
+
+	
 </script>	
 
 
@@ -64,12 +98,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: 0vw;
     z-index: 1;
 }
+<style>
+img, object{
+
+ max-height:90%;
+ max-width:90%;
+        	}
+/*This style code adjusts the image to around 90% of any screen. */
+	
 </style>
 
 <body>
+<!-- These will be the different pages and questions about symptons that the user will click on.
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Food Poisoning or A Stomach Bug?</h1>
+</div>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
 	
 </body>
 </html>

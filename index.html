@@ -56,8 +56,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	function resultsPercent ()
 	{
-		var fpPercent = (fp_count/4)*100; //variable to calculate the food poisoning percentage
-		var sbPercent = (sb_count/4)*100; //varibale to calculate the stomach bug percentage
+		var fpPercent = (fp_count/5)*100; //variable to calculate the food poisoning percentage
+		var sbPercent = (sb_count/5)*100; //varibale to calculate the stomach bug percentage
 		var resultText = document.getElementById("results");
 		resultText.innerHTML = "Probability it is Food Poisoning =" + fpPercent + "%" + "<br> Probability it is a Stomach Bug =" + sbPercent + "%";
 		//makes the results posted on the results page
@@ -155,8 +155,63 @@ img, object{
 
 			</div>
 		</div>
-	
 
+		
+	<div class="page" id="three">
+		<div class= "w3-container w3-flat-carrot">
+			<h1>Question 3</h1>
+		</div>
+
+		<div id="content" class="w3-container">
+			<p>Is the abdominal pain sharp and localized?</p>
+			<a href="four" onclick="fpAdd();" class="w3-btn w3-black"> Yes </a>
+			<a href="four" onclick="sbAdd();" class="w3-btn w3-black"> No </a>
+			<!-- This is page three, and clicking either button will take you to page four. -->	
+		</div>
+	</div>
+
+
+	<div class="page" id="four">
+		<div class= "w3-container w3-flat-carrot">
+			<h1>Question 4</h1>
+		</div>
+
+		<div id="content" class="w3-container">
+			<p>Have your symptons lasted more than 2 days?</p>
+			<a href="five" onclick="sbAdd();" class="w3-btn w3-black"> Yes </a>
+			<a href="five" onclick="fpAdd();" class="w3-btn w3-black"> No </a>
+			<!-- This is page four, and clicking either button will take you to page five -->	
+		</div>
+	</div>
+
+
+	<div class="page" id="five">
+		<div class= "w3-container w3-flat-carrot">
+			<h1>Question 5</h1>
+		</div>
+
+		<div id="content" class="w3-container">
+			<p>Did anyone who ate the same food as you experience similar symptons?</p>
+			<a href="six" onclick="fpAdd();" class="w3-btn w3-black"> Yes </a>
+			<a href="six" onclick="sbAdd();" class="w3-btn w3-black"> No </a>
+			<!-- This is page four, and clicking either button will take you to page five -->	
+		</div>
+	</div>	
+
+		
+
+	<div class="page" id="six">
+		<div class= "w3-container w3-flat-carrot">
+			<h2>Results</h2>
+		</div>
+
+		<div id="content" class="w3-container">
+		<p id="results"></p>
+		<a href="#six" onclick="resultsPercent();" class="w3-btn w3-black"> Click
+		<!-- This is the last page with the results button I created. -->
+		<img src="stomachpain.jpeg" alt="Stomach pain">
+
+		</div>
 	
 </body>
 </html>

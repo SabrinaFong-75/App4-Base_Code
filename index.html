@@ -49,7 +49,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//function that calculates the number of answers correlating to food poisoning
 
 	function sbAdd(){
-		sb_count =- sb_count + 1;
+		sb_count = sb_count + 1;
 
 	}
 		//function that calculates the number of answers correlating to stomach bug
@@ -133,8 +133,8 @@ img, object{
 
 		<div id="content" class="w3-container">
 			<p>Have you eaten anything unusual or from a questionable source in the last 24 hours?</p>
-			<a href="two" onclick="fpAdd();" class="w3-btn w3-black"> Yes </a>
-			<a href="two" onclick="sbAdd();" class="w3-btn w3-black"> No </a>
+			<a href="#two" onclick="fpAdd();" class="w3-btn w3-black"> Yes </a>
+			<a href="#two" onclick="sbAdd();" class="w3-btn w3-black"> No </a>
 			<!--This is page one, and clicking either answer takes you to page two. -->
 			<!-- I created the "yes" and "no" buttons. -->
 
@@ -208,7 +208,7 @@ img, object{
 
 		<div id="content" class="w3-container">
 		<p id="results"></p>
-		<a href="#six" onclick="resultsPercent();" class="w3-btn w3-black"> Click
+		<a href="#six" onclick="resultsPercent();" class="w3-btn w3-black"> Click </a>
 		<!-- This is the last page with the results button I created. -->
 		<img src="stomachpain.jpeg" alt="Stomach pain">
 

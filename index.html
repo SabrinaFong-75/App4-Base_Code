@@ -236,7 +236,7 @@ img, object{
 		document.getElementById("results").innerHTML = ""; //Clear the Results
         	
 		document.getElementById("restart-button").style.display = "none";
-		document.getElementByID("results-button").style.display = "block";
+		document.getElementById("results-button").style.display = "block";
 		
 		window.location.hash = ""; // CLear the hash
 		history.pushState(null, null, window.location.pathname); // Remove hash from URL

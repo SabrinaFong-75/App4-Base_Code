@@ -208,7 +208,7 @@ img, object{
 
 		<div id="content" class="w3-container">
 		<p id="results"></p>
-		<a href="#six" onclick="resultsPercent();" class="w3-btn w3-black"> Click </a>
+		<a id="results-button" href="#six" onclick="resultsPercent();" class="w3-btn w3-black">Click for Results</a>
 		<!-- This is the last page with the results button I created. -->
 		<!-- Refresh button to restart the survey -->
 		<button id="restart-button" onclick="restartSurvey();" class="w3-btn w3-red" style="display:none;">Restart Survey</button>
@@ -226,6 +226,7 @@ img, object{
         
        		 // Show the restart button only after results are shown
         	document.getElementById("restart-button").style.display = "block";
+		document.getElementById("results-button").style.display = "none";
     }
 
    	   function restartSurvey() {
@@ -233,6 +234,7 @@ img, object{
         	sb_count = 0;
         	document.getElementById("results").innerHTML = "";
         	document.getElementById("restart-button").style.display = "none";
+		document.getElementByID("results-button").style.display = "block";
         	window.location.hash = ""; // CLear the hash
 		window.location.hash = "one"; // Navigate to the first page   
     }

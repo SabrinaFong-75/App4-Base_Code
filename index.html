@@ -65,13 +65,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	}
 		//function to calculate and output the probability that symptons are of food poisoning or a stomach bug
 
-	function restartSurvey() {
-  	  // Reset the counters
- 	  fp_count = 0;
-  	  sb_count = 0;
-  	  // Force a page reload
-    	  location.reload(true);
-	}
 
 	// The following code lets you know when the file was last modified.
 	// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
@@ -222,6 +215,28 @@ img, object{
 		<img src="stomachpain.jpeg" alt="Stomach pain">
 
 		</div>
+	</div> 
+	
+	<script>
+	    function resultsPercent() {
+     		var fpPercent = (fp_count/5)*100;
+        	var sbPercent = (sb_count/5)*100;
+        	var resultText = document.getElementById("results");
+        	resultText.innerHTML = "Probability it is Food Poisoning =" + fpPercent + "%" + "<br> Probability it is a Stomach Bug =" + sbPercent + "%";
+        
+       		 // Show the restart button only after results are shown
+        	document.getElementById("restart-button").style.display = "block";
+    }
+
+   	   function restartSurvey() {
+        	fp_count = 0;
+        	sb_count = 0;
+        	document.getElementById("results").innerHTML = "";
+        	document.getElementById("restart-button").style.display = "none";
+        	location.href = "#one"; // Navigate back to the first question
+    }
+</script>	
+		
 	
 </body>
 </html>

@@ -236,9 +236,9 @@ img, object{
         	document.getElementById("restart-button").style.display = "none";
 		document.getElementByID("results-button").style.display = "block";
         	window.location.hash = ""; // CLear the hash
-		setTimeout(() => {
+		setTimeout(function() {
 		window.location.hash = "#one"; // Navigate to the first page   
-		}, 1); //delay to ensure the browser processes the hash change
+		}, 10); //delay to ensure the browser processes the hash change
     }
 </script>	
 		

@@ -43,7 +43,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	function fpAdd(){
 		fp_count = fp_count + 1; 
-		alert(fp_count);
+		(fp_count);
 
 	}
 		//function that calculates the number of answers correlating to food poisoning
@@ -211,7 +211,7 @@ img, object{
 		<a href="#six" onclick="resultsPercent();" class="w3-btn w3-black"> Click </a>
 		<!-- This is the last page with the results button I created. -->
 		<!-- Refresh button to restart the survey -->
-		<button id=restart-button onclick="restartSurvey();" class="w3-btn w3-red">Restart Survey</button>
+		<button id="restart-button" onclick="restartSurvey();" class="w3-btn w3-red" style="display:none;">Restart Survey</button>
 		<img src="stomachpain.jpeg" alt="Stomach pain">
 
 		</div>
@@ -233,7 +233,8 @@ img, object{
         	sb_count = 0;
         	document.getElementById("results").innerHTML = "";
         	document.getElementById("restart-button").style.display = "none";
-        	window.location.hash = "#one"; // Navigate back to the first question
+        	window.location.hash = ""; // CLear the hash
+		window.location.hash = "one"; // Navigate to the first page   
     }
 </script>	
 		

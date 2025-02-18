@@ -211,7 +211,7 @@ img, object{
 		<a href="#six" onclick="resultsPercent();" class="w3-btn w3-black"> Click </a>
 		<!-- This is the last page with the results button I created. -->
 		<!-- Refresh button to restart the survey -->
-		<button onclick="restartSurvey();" class="w3-btn w3-red">Restart Survey</button>
+		<button id=restart-button onclick="restartSurvey();" class="w3-btn w3-red">Restart Survey</button>
 		<img src="stomachpain.jpeg" alt="Stomach pain">
 
 		</div>
@@ -233,7 +233,7 @@ img, object{
         	sb_count = 0;
         	document.getElementById("results").innerHTML = "";
         	document.getElementById("restart-button").style.display = "none";
-        	location.href = "#one"; // Navigate back to the first question
+        	window.href = "#one"; // Navigate back to the first question
     }
 </script>	
 		
